@@ -1,0 +1,168 @@
+
+<!-- saved from url=(0042)https://www.cs.colorado.edu/~main/bgi/doc/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>
+Borland Graphics Interface (BGI) Documentation
+</title>
+
+</head><body>
+<h2>Borland Graphics Interface (BGI) for Windows</h2>
+Version 6.0, August 9, 2004
+<p>
+The following functions are mostly from the original
+Borland Graphics Interface for DOS programs.
+The BGI graphics functions may also be used with Windows programs
+created by the Borland 5.0 compiler, the free 
+<a href="https://www.cs.colorado.edu/~main/cs1300/README.html">GNU C++ compiler</a>,
+and possibly other compilers. Extra Windows
+functions are also available, described in
+<a href="https://www.cs.colorado.edu/~main/bgi/doc/bgi.html">www.cs.colorado.edu/~main/cs1300/doc/bgi/bgi.html</a>.
+These extra functions are indicated below by 
+<img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN]">. Also, any of the
+functions
+that use colors can use 
+<a href="https://www.cs.colorado.edu/~main/bgi/doc/wincolor.html">RGB colors</a> in addition to the 16-color BGI palette.
+</p><p>
+<b>Functions:</b>
+</p><pre><br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/arc.html">arc</a> (int x, int y, int stangle, int endangle, int radius);
+
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/bar.html">bar</a> (int left, int top, int right, int bottom);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/bar3d.html">bar3d</a> (int left, int top, int right, int bottom, int depth, int topflag);
+<br>      ostringstream <a href="https://www.cs.colorado.edu/~main/bgi/doc/bgiout.html">bgiout</a>; <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/circle.html">circle</a> (int x, int y, int radius);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/cleardevice.html">cleardevice</a> (void);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/clearmouseclick.html">clearmouseclick</a>(int kind); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/clearviewport.html">clearviewport</a> (void);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/closegraph.html">closegraph</a> (int window=ALL_WINDOWS); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/wincolor.html">converttorgb</a> (int color); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/delay.html">delay</a> (int millisec); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/detectgraph.html">detectgraph</a> (int *graphdriver, int *graphmode);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/drawpoly.html">drawpoly</a> (int numpoints, int *polypoints);
+
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/ellipse.html">ellipse</a> (int x, int y, int stangle, int endangle, int xradius, int yradius);
+
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/fillellipse.html">fillellipse</a> (int x, int y, int xradius, int yradius);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/fillpoly.html">fillpoly</a> (int numpoints, int *polypoints);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/floodfill.html">floodfill</a> (int x, int y, int border);
+
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getactivepage.html">getactivepage</a> (void); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/getarccoords.html">getarccoords</a> (struct arccoordstype *arccoords);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/getaspectratio.html">getaspectratio</a> (int *xasp, int *yasp);
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getbkcolor.html">getbkcolor</a> (void);
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getch.html">getch</a> (void); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getcolor.html">getcolor</a> (void);
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getcurrentwindow.html">getcurrentwindow</a> (void); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN]">
+<br>struct palettetype* <a href="https://www.cs.colorado.edu/~main/bgi/doc/getdefaultpalette.html">getdefaultpalette</a> (void);
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getdisplaycolor.html">getdisplaycolor</a> (int color); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>              char* <a href="https://www.cs.colorado.edu/~main/bgi/doc/getdrivername.html">getdrivername</a> (void);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/getfillpattern.html">getfillpattern</a> (char *pattern); 
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/getfillsettings.html">getfillsettings</a> (struct fillsettingstype *fillinfo);
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getgraphmode.html">getgraphmode</a> (void);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/getimage.html">getimage</a> (int left, int top, int right, int bottom, void *bitmap);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/getlinesettings.html">getlinesettings</a> (struct linesettingstype *lineinfo);
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getmaxcolor.html">getmaxcolor</a> (void);
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getmaxmode.html">getmaxmode</a> (void); 
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getmaxheight.html">getmaxheight</a> (void); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getmaxwidth.html">getmaxwidth</a> (void); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getmaxx.html">getmaxx</a> (void);
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getmaxy.html">getmaxy</a> (void);
+<br>              char* <a href="https://www.cs.colorado.edu/~main/bgi/doc/getmodename.html">getmodename</a> (int mode_number);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/getmoderange.html">getmoderange</a> (int graphdriver, int *lomode, int *himode);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/getmouseclick.html">getmouseclick</a>(int kind, int&amp; x, int&amp; y); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/getpalette.html">getpalette</a> (struct palettetype *palette);
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getpalettesize.html">getpalettesize</a> (void); 
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getpixel.html">getpixel</a> (int x, int y);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/gettextsettings.html">gettextsettings</a> (struct textsettingstype *texttypeinfo);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/getviewsettings.html">getviewsettings</a> (struct viewporttype *viewport);
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getvisualpage.html">getvisualpage</a> (void); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getwindowheight.html">getwindowheight</a> (void); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getwindowwidth.html">getwindowwidth</a> (void); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/getx.html">getx</a> (void);
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/gety.html">gety</a> (void);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/graphdefaults.html">graphdefaults</a> (void);
+<br>              char* <a href="https://www.cs.colorado.edu/~main/bgi/doc/grapherrormsg.html">grapherrormsg</a> (int errorcode);
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/graphresult.html">graphresult</a>(void);
+
+<br>           unsigned <a href="https://www.cs.colorado.edu/~main/bgi/doc/imagesize.html">imagesize</a> (int left, int top, int right, int bottom);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/initgraph.html">initgraph</a> (int *graphdriver, int *graphmode, char *pathtodriver);
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/initwindow.html">initwindow</a> (int width, int height, const char* title="Windows BGI", int left=0, int top=0, bool dbflag=false, bool closeflag=true); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN]">
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/installuserdriver.html">installuserdriver</a> (char *name, int huge (*detect)(void)); 
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/installuserfont.html">installuserfont</a> (char *name); 
+<br>               bool <a href="https://www.cs.colorado.edu/~main/bgi/doc/ismouseclick.html">ismouseclick</a>(int kind); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/kbhit.html">kbhit</a> (void); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/line.html">line</a> (int x1, int y1, int x2, int y2);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/linerel.html">linerel</a> (int dx, int dy);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/lineto.html">lineto</a> (int x, int y);
+
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/mousex.html">mousex</a> (void); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/mousey.html">mousey</a> (void); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/moverel.html">moverel</a> (int dx, int dy);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/moveto.html">moveto</a> (int x, int y);
+
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/outtext.html">outtext</a> (char *textstring);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/outtextxy.html">outtextxy</a> (int x, int y, char *textstring);
+
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/pieslice.html">pieslice</a> (int x, int y, int stangle, int endangle, int radius);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/printimage.html">printimage</a> (
+<br>                        const char* title=NULL, double width_inches=7, 
+<br>                        double border_left_inches=0.75, double border_top_inches=0.75,
+<br>                        int left=0, int right=0, int right=INT_MAX, int bottom=INT_MAX
+<br>                        ); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN]">
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/putimage.html">putimage</a> (int left, int top, void *bitmap, int op);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/putpixel.html">putpixel</a> (int x, int y, int color); 
+
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/readimagefile.html">readimagefile</a> (
+<br>                        const char* filename=NULL,
+<br>                        int left=0, int top=0, int right=INT_MAX, int bottom=INT_MAX
+<br>                        );
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/rectangle.html">rectangle</a> (int left, int top, int right, int bottom);
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/registerbgidriver.html">registerbgidriver</a> (void (*driver)(void)); 
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/registerbgifont.html">registerbgifont</a> (void (*font)(void)); 
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/registermousehandler.html">registermousehandler</a> (int kind, void h(int, int)); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/restorecrtmode.html">restorecrtmode</a> (void); 
+
+<br>                    <a href="https://www.cs.colorado.edu/~main/bgi/doc/wincolor.html">RGB functions:</a> <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>                      COLOR(r,g,b), 
+<br>                      RED_VALUE(v), GREEN_VALUE(v), BLUE_VALUE(v), 
+<br>                      IS_BGI_COLOR(v), IS_RGB_COLOR(v)
+
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/sector.html">sector</a> (int x, int y, int stangle, int endangle, int xradius, int yradius);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/setactivepage.html">setactivepage</a> (int page);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/setallpalette.html">setallpalette</a> (struct palettetype *palette); 
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/setaspectratio.html">setaspectratio</a> (int xasp, int yasp);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/setbkcolor.html">setbkcolor</a> (int color);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/setcolor.html">setcolor</a> (int color); 
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/setcurrentwindow.html">setcurrentwindow</a> (int window); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN]">
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/setmousequeuestatus.html">setmousequeuestatus</a>(int kind, bool status=true); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/setfillpattern.html">setfillpattern</a> (char *upattern, int color); 
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/setfillstyle.html">setfillstyle</a> (int pattern, int color); 
+<br>           unsigned <a href="https://www.cs.colorado.edu/~main/bgi/doc/setgraphbufsize.html">setgraphbufsize</a> (unsigned bufsize); 
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/setgraphmode.html">setgraphmode</a> (int mode); 
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/setlinestyle.html">setlinestyle</a> (int linestyle, unsigned upattern, int thickness);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/setpalette.html">setpalette</a> (int colornum, int color); 
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/setrgbpalette.html">setrgbpalette</a> (int colornum, int red, int green, int blue); 
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/settextjustify.html">settextjustify</a> (int horiz, int vert);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/settextstyle.html">settextstyle</a> (int font, int direction, int charsize);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/setusercharsize.html">setusercharsize</a> (int multx, int divx, int multy, int divy);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/setviewport.html">setviewport</a> (int left, int top, int right, int bottom, int clip);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/setvisualpage.html">setvisualpage</a> (int page);
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/setwritemode.html">setwritemode</a> (int mode);
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/showerrorbox.html">showerrorbox</a> (const char *message); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/swapbuffers.html">swapbuffers</a> (void); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN]">
+
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/textheight.html">textheight</a> (char *textstring);
+<br>                int <a href="https://www.cs.colorado.edu/~main/bgi/doc/textwidth.html">textwidth</a> (char *textstring);
+
+<br>               void <a href="https://www.cs.colorado.edu/~main/bgi/doc/writeimagefile.html">writeimagefile</a> (
+<br>                        const char* filename=NULL,
+<br>                        double width_inches=7, double border_left_inches=0.75, double border_top_inches=0.75,
+<br>                        int left=0, int top=0, int right=INT_MAX, int bottom=INT_MAX
+<br>                        ); <img src="./Borland Graphics Interface (BGI) Documentation_files/win.gif" alt="[WIN" ]="">
+
+</pre>
+
+
+</body></html>
